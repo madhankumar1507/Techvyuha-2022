@@ -232,7 +232,7 @@
     
                     <h3 class="h6">fill up the details </h3>
     
-<form name="google-sheet" id="contactForm" method="POST" action="thanks.html" novalidate="novalidate">
+<form name="google-sheet" id="contactForm" method="POST" action="index.html" novalidate="novalidate">
                         <fieldset>
         
                         <div class="form-field">
@@ -278,7 +278,7 @@
             form.addEventListener('submit', e => {
               e.preventDefault()
               fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-                .then(response => window.location.href = "thanks.html")
+                .then(response => window.location.href = "#contact")
                 .catch(error => console.error('Error!', error.message))
             })
   </script>
