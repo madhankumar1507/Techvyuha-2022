@@ -235,7 +235,7 @@
                         <fieldset>
         
                         <div class="form-field">
-                            <input name="Name" type="text" id="contactName" placeholder="Your Name" value="" minlength="2" required="" aria-required="true" class="full-width">
+                            <input name="Name" type="text" id="contactName" placeholder="Your Name<sup>*</sup>" value="" minlength="2" required="" aria-required="true" class="full-width">
                         </div>
                         <div class="form-field">
                             <input name="Email" type="email" id="contactEmail" placeholder="Your Email" value="" required="" aria-required="true" class="full-width">
@@ -254,7 +254,7 @@
                             <input name="Contact" type="text" id="contactContact" placeholder="Contact" value="" class="full-width">
                         </div>
                         <div class="form-field">
-                            <label>Event<sup style color="#39b94d">*</sup></label>
+                            <label>Event</sup></label>
                             <input name="Event Type" type="text" id="contactEvent" placeholder="poster presentation, web design" value="" class="full-width" required="">
                         </div>
                         <div class="form-field">
@@ -277,7 +277,7 @@
             form.addEventListener('submit', e => {
               e.preventDefault()
               fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-                .then(response => alert("You have successfully submitted."))
+                .then(response => alert(""))
                 .catch(error => console.error('Error!', error.message))
             })
   </script>
