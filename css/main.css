@@ -796,15 +796,15 @@ input[type="button"] {
     line-height: calc(5.4rem - .4rem);
     padding: 0 3rem;
     margin: 0 3rem 1.2rem 0;
-    color: #000000;
+    color: #ffffff;
     text-decoration: none;
     text-align: center;
     white-space: nowrap;
     cursor: pointer;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
-    background-color: #51d05c;
-    border: .2rem solid #c5c5c5;
+    background-color: #39b54a;
+    border: .2rem solid #ffffff;
 }
 
 .btn:hover,
@@ -817,8 +817,8 @@ button:focus,
 input[type="submit"]:focus,
 input[type="reset"]:focus,
 input[type="button"]:focus {
-    background-color: #b8b8b8;
-    border-color: #b8b8b8;
+    background-color: #ffffff;
+    border-color: #39b54a;
     color: #000000;
     outline: 0;
 }
