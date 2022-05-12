@@ -278,8 +278,9 @@
             const form = document.forms['google-sheet']
           
             form.addEventListener('submit', e => {
+                 document.getElementById("contactForm").reset();
               e.preventDefault()
-                document.getElementById("contactForm").reset();
+               
               fetch(scriptURL, { method: 'POST', body: new FormData(form)})
                 .then(response => submitForm())
                 .catch(error => console.error('Error!', error.message))
