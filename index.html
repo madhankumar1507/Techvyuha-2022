@@ -264,13 +264,13 @@
                         </div>
                         <br>
                             
-                            <input type="submit" value="submit" name="submit" class="btn" id="btnsubmit" onclick=""/>
+                            <input type="submit" value="submit" name="submit" class="btn" id="btnsubmit" onclick="my()"/>
                             
         
                         </fieldset>
                     </form>
                     <script type="text/javascript">
-
+function my(){
 
       const scriptURL = 'https://script.google.com/macros/s/AKfycbyCn4SQVtaihm-dS9Jzii4O3dMow2EcKkrOPQRmM1a07AY0hJJJHYDI5S0fS6jH2no9gA/exec'
             const form = document.forms['google-sheet']
@@ -280,7 +280,7 @@
               fetch(scriptURL, { method: 'POST', body: new FormData(form)})
                 .then(response => submitForm())
                 .catch(error => console.error('Error!', error.message))
-            })
+            })}
                     </script>
                     <script>
                        function submitForm(){
