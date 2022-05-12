@@ -264,7 +264,7 @@
                         </div>
                         <br>
                             
-                            <input type="submit" value="submit" name="submit" class="btn"/>
+                            <input type="submit" value="submit" name="submit" class="btn" id="btnsubmit" onclick="submitForm()"/>
                             
         
                         </fieldset>
@@ -281,9 +281,19 @@
                 .then(response => window.location.href = "index.html")
                 .catch(error => console.error('Error!', error.message))
             })
+                         
+            function submitForm() {
+           // Get the first form with the name
+           // Usually the form name is not repeated
+           // but duplicate names are possible in HTML
+           // Therefore to work around the issue, enforce the correct index
+           var frm = document.getElementsByName('google-sheet')[0];
+           frm.submit(); // Submit the form
+           frm.reset();  // Reset all form data
+           return false; // Prevent page refresh
+            }
   </script>
-                    </div> 
-                </div> 
+                  
     </section> 
 
     <div id="preloader">
