@@ -374,7 +374,6 @@
             }
     
         });
-        $('#contactForm')[0].reset();
     };
 
 
