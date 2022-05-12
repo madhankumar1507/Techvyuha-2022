@@ -278,13 +278,15 @@
             form.addEventListener('submit', e => {
               e.preventDefault()
               fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-                .then(response => document.getElementById("contactForm").reset())
+                .then(response => submitForm())
                 .catch(error => console.error('Error!', error.message))
             })
- 
-                       
-                            document.getElementById("contactForm").reset()
-                        
+                    </script>
+                    <script>
+                       function submitForm(){
+                            document.getElementById("contactForm").submit()
+                       }
+                       function submitForm(){ 
                        
                             document.getElementById('contactName').value='';
                             document.getElementById('contactEmail').value='';
@@ -303,7 +305,7 @@
                             document.getElementById('contactYear').required = false;
                             document.getElementById('contactEvent').required = false;
                             document.getElementById('contactTopic').required = false;
-                   
+                       }
                     </script>
                   
     </section> 
