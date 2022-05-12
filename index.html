@@ -269,40 +269,22 @@
         
                         </fieldset>
                     </form>
-                    <script>
-    $(document).ready(function () {
-
-        $("#formABC").submit(function (e) {
-
-            //stop submitting the form to see the disabled button effect
-            e.preventDefault();
-
-            //disable the submit button
-            $("#btnSubmit").attr("disabled", true);
-
-            
-
-            return my();
-
-        });
-    });
-</script>
+                    
                     
                     <script type="text/javascript">
                        
-function my(){
+
       
       const scriptURL = 'https://script.google.com/macros/s/AKfycbyCn4SQVtaihm-dS9Jzii4O3dMow2EcKkrOPQRmM1a07AY0hJJJHYDI5S0fS6jH2no9gA/exec'
             const form = document.forms['google-sheet']
           
             form.addEventListener('submit', e => {
                  
-             
-                e.preventDefault()
+            
               fetch(scriptURL, { method: 'POST', body: new FormData(form)})
                 .then(response => submitForm())
                 .catch(error => console.error('Error!', error.message))
-            })}
+            })
                     </script>
                     <script>
                        function submitForm(){
