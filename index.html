@@ -280,12 +280,11 @@
               fetch(scriptURL, { method: 'POST', body: new FormData(form)})
                 .catch(error => console.error('Error!', error.message))
             })
-  </script>
-                    <script>
-                        function submitForm() {
+ 
+                       
                             document.getElementById("contactForm").submit()
-                        }
-                        function submitForm(){
+                        
+                       
                             document.getElementById('contactName').value='';
                             document.getElementById('contactEmail').value='';
                             document.getElementById('contactCollege').value='';
@@ -303,7 +302,7 @@
                             document.getElementById('contactYear').required = false;
                             document.getElementById('contactEvent').required = false;
                             document.getElementById('contactTopic').required = false;
-                            }
+                   
                     </script>
                   
     </section> 
