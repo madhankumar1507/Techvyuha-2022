@@ -264,29 +264,12 @@
                         </div>
                         <br>
                             
-                            <input type="submit" value="submit" name="submit" class="btn" id="btnsubmit" onclick="validateForm"/>
+                            <input type="submit" value="submit" name="submit" class="btn" id="btnsubmit" onclick="my()"/>
                             
         
                         </fieldset>
                     </form>
-                    <script>
-                    function validateForm() {
-  var a = document.forms["google-sheet"]["contactName"].value;
-                        var b = document.forms["google-sheet"]["contactEmail"].value;
-                        var c = document.forms["google-sheet"]["contactCollege"].value;
-                        var d = document.forms["google-sheet"]["contactRollno"].value;
-                        var e = document.forms["google-sheet"]["contactYear"].value;
-                        var f = document.forms["google-sheet"]["contactTopic"].value;
-                        var g = document.forms["google-sheet"]["contactEvent"].value;
-  if((a == "") || (b == "") || (c == "") || (d == "") || (e == "") || (f == "") || (g == "")) {
-    alert("All fields must be filled must be filled out");
-    return false;
-  }
-                        else{
-                        return my();
-                        }
-}
-                    </script>
+                    
                     <script type="text/javascript">
                         
 function my(){
