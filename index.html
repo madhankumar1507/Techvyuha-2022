@@ -269,27 +269,31 @@
         
                         </fieldset>
                     </form>
-    <script>
-        function submitForm(){
-            document.getElementById('contactName').value='';
-            document.getElementById('contactEmail').value='';
-            document.getElementById('contactCollege').value='';
-            document.getElementById('contactRollno').value='';
-            document.getElementById('contactContact').value='';
-            document.getElementById('contactYear').value='';
-            document.getElementById('contactEvent').value='';
-            document.getElementById('contactTopic').value='';
-            
-             document.getElementById('contactName').required = false;
-            document.getElementById('contactEmail').required = false;
-            document.getElementById('contactCollege').required = false;
-            document.getElementById('contactRollno').required = false;
-            document.getElementById('contactContact').required = false;
-            document.getElementById('contactYear').required = false;
-            document.getElementById('contactEvent').required = false;
-            document.getElementById('contactTopic').required = false;
-            }
-    </script>
+                    
+                    <script>
+                        function submitForm() {
+                            document.getElementById("customForm").submit()
+                        }
+                        function submitForm(){
+                            document.getElementById('contactName').value='';
+                            document.getElementById('contactEmail').value='';
+                            document.getElementById('contactCollege').value='';
+                            document.getElementById('contactRollno').value='';
+                            document.getElementById('contactContact').value='';
+                            document.getElementById('contactYear').value='';
+                            document.getElementById('contactEvent').value='';
+                            document.getElementById('contactTopic').value='';
+
+                            document.getElementById('contactName').required = false;
+                            document.getElementById('contactEmail').required = false;
+                            document.getElementById('contactCollege').required = false;
+                            document.getElementById('contactRollno').required = false;
+                            document.getElementById('contactContact').required = false;
+                            document.getElementById('contactYear').required = false;
+                            document.getElementById('contactEvent').required = false;
+                            document.getElementById('contactTopic').required = false;
+                            }
+                    </script>
                   
     </section> 
 
