@@ -269,18 +269,7 @@
         
                         </fieldset>
                     </form>
-                     <script type="text/javascript">
-
-
-      const scriptURL = 'https://script.google.com/macros/s/AKfycbyCn4SQVtaihm-dS9Jzii4O3dMow2EcKkrOPQRmM1a07AY0hJJJHYDI5S0fS6jH2no9gA/exec'
-            const form = document.forms['google-sheet']
-          
-            form.addEventListener('submit', e => {
-              e.preventDefault()
-              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-                .then(response => window.location.href = "index.html")
-                .catch(error => console.error('Error!', error.message))
-            })
+    <script type="text/javascript">
                          
             function submitForm() {
            // Get the first form with the name
@@ -292,7 +281,7 @@
            frm.reset();  // Reset all form data
            return false; // Prevent page refresh
             }
-  </script>
+    </script>
                   
     </section> 
 
