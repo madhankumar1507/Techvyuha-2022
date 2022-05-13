@@ -232,7 +232,7 @@
     
                     <h3 class="h6">fill up the details </h3>
     
-<form name="google-sheet" id="contactForm" method="POST" action="index.html" novalidate="novalidate">
+                <form name="google-sheet" class="regForm" id="contactForm" method="POST" action="index.html" novalidate="novalidate">
                         <fieldset>
         
                         <div class="form-field">
@@ -286,6 +286,38 @@
                 .catch(error => console.error('Error!', error.message))
             })
                     </script>
+                    
+                    
+                    
+                    <script src="https://smtpjs.com/v3/smtp.js">
+                    </script>
+                    
+                    <script>
+                        const formSelector =  document.querySelector('#contactForm');
+                        
+                        function sendMsg(e){
+                            e.preventDefault();
+                            
+                                  const name = document.querySelector('#contactName'),
+                                        email = document.querySelector('#contactEmail');
+                        
+                            Email.send({
+                                SecureToken : "54edc433-e523-44eb-86a3-a359090e2c1d",
+                                To : email.value,
+                                From : "techvyuha2022@gmail.com",
+                                Subject : "Congratulations! For Your Successful Registration",
+                                Body : "Dear "+ name.value +",\n"+"We are so glad, you have registered for our event.\n"+"We heartly welcome to particpate our prestigious event TECHVYUHA-2K22.\n"+"Futher information will be convyed to you through mails\n"+"Cheers, "+ name.value +"!\n"+"Thanking You\nTechvyuha Coordiantors",                     
+                            }).then(
+                              message => alert(message)
+                            );
+                        }
+                        
+                        formSelector.addEventListener('submit', sendMsg);
+                        
+                        
+                    </script>
+                    
+
                     <script>
                        function submitForm(){
                             document.getElementById("contactForm").reset();
