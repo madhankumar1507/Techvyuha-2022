@@ -232,7 +232,7 @@
     
                     <h3 class="h6">fill up the details </h3>
     
-                <form name="google-sheet" class="regForm" id="contactForm" method="POST" onsubmit="sendEmail()" novalidate="novalidate">
+                <form name="google-sheet" class="regForm" id="contactForm" method="POST" novalidate="novalidate">
                         <fieldset>
         
                         <div class="form-field">
@@ -264,7 +264,7 @@
                         </div>
                         <br>
                             
-                            <input type="submit" id="btnSubmit" value="submit" name="submit" class="btn" id="btnsubmit"/>
+                            <input type="submit" id="btnSubmit" value="submit" name="submit" class="btn" id="btnsubmit" onclick="sendEmail()"/>
                             
         
                         </fieldset>
@@ -291,15 +291,15 @@
 			<script>
 			function sendEmail(){
 				Email.send({
-				    Host : "smtp.elasticemail.com",
-				    Username : "techvyuha2022@gmail.com",
-				    Password : "9b467c30-7593-4935-a0d2-596c21e38a82",
+				    Host : "smtp.gmail.com",
+				    Username : "aswanikumar7032@gmail.com",
+				    Password : "Gulli_Gulli@771999",
 				    To : 'techvyuha2022@gmail.com',
-				    From : "techvyuha2022@gmail.com",
+				    From : "aswanikumar7032@gmail.com",
 				    Subject : "This is the subject",
 				    Body : "And this is the body"
 				}).then(
-				  message => alert("OK")
+				  message => alert("Submit Successfully")
 				);
 			}
 			</script>
