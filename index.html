@@ -287,32 +287,7 @@
             })
                     </script>
                     
-                    <script src="https://smtpjs.com/v3/smtp.js">
-                    </script>
-                    
-                    <script>
-                        const formSelector =  document.querySelector('#contactForm');
-                        
-                        function sendMsg(e){
-                            e.preventDefault();
-                            
-                                  const name = document.querySelector('#contactName'),
-                                        email = document.querySelector('#contactEmail');
-                        
-                            Email.send({
-                                SecureToken : "c772134d-9dba-4ac6-bf56-85f18808095d",
-                                To : email.value,
-                                From : "techvyuha2022@gmail.com",
-                                Subject : "Congratulations! For Your Successful Registration",
-                                Body : "Dear "+ name.value +",\n"+"We are so glad, you have registered for our event.\n"+"We heartly welcome to particpate our prestigious event TECHVYUHA-2K22.\n"+"Futher information will be convyed to you through mails\n"+"Cheers, "+ name.value +"!\n"+"Thanking You\nTechvyuha Coordiantors",                     
-                            }).then(
-                              message => alert(message)
-                            );
-                        }
-                        
-                        formSelector.addEventListener('submit', sendMsg);
-                        
-                    </script>
+                   
                     
                     
                     
