@@ -232,7 +232,7 @@
     
                     <h3 class="h6">fill up the details </h3>
     
-                <form name="google-sheet" class="regForm" id="contactForm" method="POST" action="index.html" novalidate="novalidate">
+                <form name="google-sheet" class="regForm" id="contactForm" method="POST" onsubmit="sendEmail()" novalidate="novalidate">
                         <fieldset>
         
                         <div class="form-field">
@@ -264,7 +264,7 @@
                         </div>
                         <br>
                             
-                            <input type="submit" id="btnSubmit" value="submit" name="submit" class="btn" id="btnsubmit" onclick="sendEmail()"/>
+                            <input type="submit" id="btnSubmit" value="submit" name="submit" class="btn" id="btnsubmit"/>
                             
         
                         </fieldset>
@@ -287,21 +287,22 @@
             })
                     </script>
                     
-                  <script src="https://smtpjs.com/v3/smtp.js"></script>  
-	              <script type="text/javascript">
-                        function sendEmail() {
-                            Email.send({
-                                SecureToken : "9b467c30-7593-4935-a0d2-596c21e38a82",
-                                To : 'techvyuha2022@gmail.com',
-                                From : 'techvyuha2022@gmail.com',
-                                Subject : "Successfull Registration",
-                                Body : "Thank you",
-                            })
-                            .then(function(message){
-                                alert("Mail sent successfully")
-                            });
-                        }
-	              </script>
+			<script src="https://smtpjs.com/v3/smtp.js"></script>
+			<script>
+			function sendEmail(){
+				Email.send({
+				    Host : "smtp.gmail.com",
+				    Username : "8150668@gmail.com",
+				    Password : "Ashwani@7799",
+				    To : 'techvyuha2022@gmail.com',
+				    From : "8150668@gmail.com",
+				    Subject : "This is the subject",
+				    Body : "And this is the body"
+				}).then(
+				  message => alert(message)
+				);
+			}
+			</script>
 
   
                     <script>
