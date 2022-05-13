@@ -292,13 +292,13 @@
                         function sendEmail() {
                             Email.send({
                                 SecureToken : "9b467c30-7593-4935-a0d2-596c21e38a82",
-                                To : 'aswanikumar7032@gmail.com',
-                                From : "techvyuha2022@gmail.com",
+                                To : 'techvyuha2022@gmail.com',
+                                From : 'techvyuha2022@gmail.com',
                                 Subject : "Successfull Registration",
                                 Body : "Thank you",
                             })
                             .then(function(message){
-                                alert("mail sent successfully")
+                                alert("Mail sent successfully")
                             });
                         }
 	              </script>
@@ -307,26 +307,6 @@
                     <script>
                        function submitForm(){
                             document.getElementById("contactForm").reset();
-                       }
-                       function submitForm(){ 
-                       
-                            document.getElementById('contactName').value='';
-                            document.getElementById('contactEmail').value='';
-                            document.getElementById('contactCollege').value='';
-                            document.getElementById('contactRollno').value='';
-                            document.getElementById('contactContact').value='';
-                            document.getElementById('contactYear').value='';
-                            document.getElementById('contactEvent').value='';
-                            document.getElementById('contactTopic').value='';
-
-                            document.getElementById('contactName').required = false;
-                            document.getElementById('contactEmail').required = false;
-                            document.getElementById('contactCollege').required = false;
-                            document.getElementById('contactRollno').required = false;
-                            document.getElementById('contactContact').required = false;
-                            document.getElementById('contactYear').required = false;
-                            document.getElementById('contactEvent').required = false;
-                            document.getElementById('contactTopic').required = false;
                        }
                     </script>
                   
