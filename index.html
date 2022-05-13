@@ -264,7 +264,7 @@
                         </div>
                         <br>
                             
-                            <input type="submit" id="btnSubmit" value="submit" name="submit" class="btn" id="btnsubmit" onclick="sendMail()"/>
+                            <input type="submit" id="btnSubmit" value="submit" name="submit" class="btn" id="btnsubmit" onclick="sendEmail()"/>
                             
         
                         </fieldset>
@@ -287,34 +287,23 @@
             })
                     </script>
                     
-                   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
-                   <script src="https://smtpjs.com/v3/smtp.js"></script>
-                    
-                   <script>
-                       function sendMail(){
-                           var name = $('#contactName').val();
-                           var email = $('#contactEmail').val();
-                       
-                       Email.send({
-                        Host : "smtp.gmail.com",
-                        Username : "techvyuha2022@gmail.com",
-                        Password : "Tech@2022",
-                        To : email,
-                        From : "techvyuha2022@gmail.com",
-                        Subject : "Congratulations! For Your Successful Registration",
-                        Body : "Dear "+ name +",<br>"+"We are so glad, you have registered for our event.<br>"+"We heartly welcome to particpate our prestigious event TECHVYUHA-2K22.<br>"+"Futher information will be convyed to you through mails<br><br><br>"+"Cheers, "+ name +"!<br>"+"Thanking You<br>Techvyuha Coordiantors"
-                    }).then(
-                      message =>{
-                      if(message == 'OK'){
-                        alert("Thank you For Registering")
-                      }
-                      else{
-                          alert("Error!!")
-                      }
-                    );
-                  }
-                    </script>
+                  <script src="https://smtpjs.com/v3/smtp.js"></script>  
+	              <script type="text/javascript">
+                        function sendEmail() {
+                            Email.send({
+                                Host: "smtp.gmail.com",
+                                Username : "techvyuha2022@gmail.com",
+                                Password : "Tech@2022",
+                                To : 'aswanikumar7032@gmail.com',
+                                From : "techvyuha2022@gmail.com",
+                                Subject : "Successfull Registration",
+                                Body : "Thank you",
+                            })
+                            .then(function(message){
+                                alert("mail sent successfully")
+                            });
+                        }
+	              </script>
 
   
                     <script>
