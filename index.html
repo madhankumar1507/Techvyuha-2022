@@ -232,7 +232,7 @@
     
                     <h3 class="h6">fill up the details </h3>
     
-                <form name="google-sheet" class="regForm" id="contactForm" method="POST" novalidate="novalidate">
+                <form name="google-sheet" class="regForm" id="contactForm" method="POST" novalidate="novalidate" onSubmit="sendEmail()">
                         <fieldset>
         
                         <div class="form-field">
@@ -289,10 +289,12 @@
                     
 			<script src="https://smtpjs.com/v3/smtp.js"></script>
 			<script type="text/javascript">
-			function submitForm(){
+			function sendEmail(){
 				Email.send({
-				    SecureToken : "e2150e9c-aa46-4765-9e86-8f57ac3d8c87",
-				    To : document.getElementById("contactEmail").value(),
+				    Host : "smtp.elasticemail.com",
+				    Username : "techvyuha2022@gmail.com",
+				    Password : "5E3AD4C1741329B115CA90F3CEF7BF272245",
+				    To : "plsv2103@gmail.com",
 				    From : "techvyuha2022@gmail.com",
 				    Subject : "This is the subject",
 				    Body : "And this is the body"
