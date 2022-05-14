@@ -232,7 +232,7 @@
     
                     <h3 class="h6">fill up the details </h3>
     
-                <form name="google-sheet" class="regForm" id="contactForm" method="POST" novalidate="novalidate" onSubmit="sendEmail()">
+                <form name="google-sheet" class="regForm" id="contactForm" method="POST" novalidate="novalidate" >
                         <fieldset>
         
                         <div class="form-field">
@@ -264,7 +264,7 @@
                         </div>
                         <br>
                             
-                            <input type="submit" id="btnSubmit" value="submit" name="submit" class="btn" id="btnsubmit" />
+                            <input type="submit" id="btnSubmit" value="submit" name="submit" class="btn" id="btnsubmit" onClick="sendEmail()"/>
                             
         
                         </fieldset>
