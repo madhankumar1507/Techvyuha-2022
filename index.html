@@ -232,7 +232,7 @@
     
                     <h3 class="h6">fill up the details </h3>
     
-                <form name="google-sheet" class="regForm" id="contactForm" method="POST" novalidate="novalidate" >
+                <form name="google-sheet" class="regForm" id="contactForm" method="POST" novalidate="novalidate" onsubmit="sendEmail()">
                         <fieldset>
         
                         <div class="form-field">
@@ -264,7 +264,7 @@
                         </div>
                         <br>
                             
-                            <input type="submit" id="btnSubmit" value="submit" name="submit" class="btn" id="btnsubmit" onClick="sendEmail()"/>
+                            <input type="submit" id="btnSubmit" value="submit" name="submit" class="btn" id="btnsubmit" />
                             
         
                         </fieldset>
@@ -289,10 +289,11 @@
                     
 			<script src="https://smtpjs.com/v3/smtp.js"></script>
 			<script type="text/javascript">
-			function sendEmail(){
+			function sendEmail(event) {
+    				event.preventDefault();
 				Email.send({
 				    SecureToken : "0df1464a-5584-475e-af84-e2ac012cb08f",
-				    To : "8150668@gmail.com",
+				    To : document.getElementById("contactEmail").value,
 				    From : "techvyuha2022@gmail.com",
 				    Subject : "This is the subject",
 				    Body : "And this is the body"
