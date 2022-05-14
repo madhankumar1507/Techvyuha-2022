@@ -264,7 +264,7 @@
                         </div>
                         <br>
                             
-                            <input type="submit" id="btnSubmit" value="submit" name="submit" class="btn" id="btnsubmit" onclick="sendEmail()"/>
+                            <input type="submit" id="btnSubmit" value="submit" name="submit" class="btn" id="btnsubmit" />
                             
         
                         </fieldset>
@@ -289,7 +289,7 @@
                     
 			<script src="https://smtpjs.com/v3/smtp.js"></script>
 			<script type="text/javascript">
-			function sendEmail(){
+			function submitForm(){
 				Email.send({
 				    SecureToken : "e2150e9c-aa46-4765-9e86-8f57ac3d8c87",
 				    To : document.getElementById("contactEmail").value(),
@@ -297,7 +297,7 @@
 				    Subject : "This is the subject",
 				    Body : "And this is the body"
 				}).then(
-				  message => alert(message)
+				  message => alert("Successfully Submitted")
 				);
 			}
 			</script>
