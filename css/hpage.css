@@ -5,7 +5,7 @@
     font-family: 'JetBrains Mono', monospace;
   }
   :root {
-    --colorMain: #292c2e;
+    --colorMain: #252829;
     --brShadow: -6px 6px 15px rgb(61, 54, 54);
     --tlShadow: 6px -6px 15px rgba(13, 12, 12, 0.874);
   }
@@ -71,6 +71,7 @@
 {
   width: 320px;
   margin: 20px;
+  background: #252829;
   padding: 40px 30px;
   border-radius: 40px;
   box-shadow: -6px -6px 20px rgb(56, 50, 50), 6px 6px 20px rgb(17, 17, 17);
