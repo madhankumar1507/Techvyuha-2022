@@ -282,10 +282,13 @@
                         </div>
                         <div class="form-field">
                             <label>Event</label>
-                            <input name="Event Type" type="checkbox" id="contactEvent" value="paper" class="full-width" required=""/>Paper(Power-point Presentation)
-				<input name="Event Type" type="checkbox" id="contactEvent" value="Poster" class="full-width" required=""/>Poster
-				<input name="Event Type" type="checkbox" id="contactEvent" value="Project Expo" class="full-width" required=""/>Project Expo
-				<input name="Event Type" type="checkbox" id="contactEvent" value="Web Development" class="full-width" required=""/>Web Development(Theme Based Front-end Development using HTML, CSS, Java Script)
+				<select name="Event Type" id="liste" class="full-width" required="" style=background-color:"black" multiple>
+				<option value="">select event</value>
+					<option value="paper">Paper(Power-point Presentation)</value>
+				<option value="Poster">Poster</value>
+				<option value="Project Expo">Project Expo</value>
+			<option value="Web Development">Web Development(Theme Based Front-end Development using HTML, CSS, Java Script)</value>
+</select>
                         </div>
                         <div class="form-field">
                             <label>Topic</label>
@@ -306,14 +309,10 @@
       
       const scriptURL = 'https://script.google.com/macros/s/AKfycbyCn4SQVtaihm-dS9Jzii4O3dMow2EcKkrOPQRmM1a07AY0hJJJHYDI5S0fS6jH2no9gA/exec'
             const form = document.forms['google-sheet']
-          var values = [];
+         
             form.addEventListener('submit', e => {
                  
             e.preventDefault()
-		    var checkboxes1 = document.getElementsByName('Event Type');
-		    for(var i=0;i<checkboxes1.length;i++){
-		    if(checkboxes1[i].checked == true){
-			    values.push(checkboxes1[i].value);
 		    
 		    }
 		    }
