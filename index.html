@@ -275,8 +275,11 @@
                             <input name="Contact" type="text" id="contactContact" placeholder="Contact" value="" class="full-width">
                         </div>
                         <div class="form-field">
-                            <label>Event<sup style=color:"black">*</sup></label>
-                            <input name="Event Type" type="text" id="contactEvent" placeholder="poster presentation, web design" value="" class="full-width" required="">
+                            <label>Event</label>
+                            <input name="Event Type" type="checkbox" id="contactEvent" value="paper" class="full-width" required=""/>Paper(Power-point Presentation)
+				<input name="Event Type" type="checkbox" id="contactEvent" value="Poster" class="full-width" required=""/>Poster
+				<input name="Event Type" type="checkbox" id="contactEvent" value="Project Expo" class="full-width" required=""/>Project Expo
+				<input name="Event Type" type="checkbox" id="contactEvent" value="Web Development" class="full-width" required=""/>Web Development(Theme Based Front-end Development using HTML, CSS, Java Script)
                         </div>
                         <div class="form-field">
                             <label>Topic</label>
@@ -318,7 +321,7 @@
 				    Subject : "This is the subject",
 				    Body : "And this is the body"
 				}).then(
-				  message => alert("Successfully Submitted")
+				  
 				);
 			}
 			</script>
