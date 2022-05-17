@@ -345,14 +345,16 @@
 			<script type="text/javascript">
 			function sendEmail() {
 				Email.send({
-				    SecureToken : "0df1464a-5584-475e-af84-e2ac012cb08f",
-				    To : "aswanikumar7032@gmail.com",
-				    From : "techvyuha2022@gmail.com",
-				    Subject : "This is the subject",
-				    Body : "And this is the body"
-				}).then(
-				  
-				);
+				    Host : 'smtp.gmail.com',
+				    Username : 'techvyuha2022@gmail.com',
+				    Password : 'Tech@2022',
+				    To : 'gurivelli.aswani99@yahoo.com',
+				    From : 'techvyuha2022@gmail.com',
+				    Subject : 'This is the subject',
+				    Body : 'And this is the body'
+					}).then(
+					  message => alert("You've been Successfully Registered!!")
+					);
 			}
 			</script>
 
